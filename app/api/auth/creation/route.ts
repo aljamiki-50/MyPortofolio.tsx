@@ -93,7 +93,7 @@ export async function GET() {
     try {
         const user = await getUserFromSession();
         await createUserInDb(user);
-        return NextResponse.redirect("https://my-portofolio-80c11b0dz-works-projects-efd052ef.vercel.app/guestbook", 302);
+        return NextResponse.redirect("https://my-portofolio-tsx.vercel.app/guestbook", 302);
     } catch (error) {
         console.error(`Error in creation API: ${error} `);
         return new NextResponse(
