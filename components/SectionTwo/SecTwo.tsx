@@ -4,13 +4,10 @@ import square from "../../public/square.jpg"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import Bootstrap from "../../public/Bootstrap icon.svg"
 import Nextjs from "../../public/next.svg"
-import chrome from "../../public/chrome icon.svg"
 import discord from "../../public/discord.svg"
 import figma from "../../public/Figma.svg"
-import github from "../../public/github icon.svg"
 import vercel from "../../public/vercel.svg"
 import visual from "../../public/visual.svg"
-import cloud from "../../public/cloudflare icon.svg"
 // Social icons : 
 import twiiter from "../../public/Twitter.svg"
 import facebook from "../../public/Facebook.svg"
@@ -22,13 +19,10 @@ const SecTwo = () => {
     const icons = [
         Bootstrap,
         Nextjs,
-        chrome,
         discord,
         figma,
-        github,
         vercel,
         visual,
-        cloud,
 
     ]
 
@@ -77,8 +71,8 @@ const SecTwo = () => {
                         <CardContent className=' flex flex-wrap  gap-4'>
                             {icons.map((icon, index) => (
                                 <div
-                                 key={index}
-                                 className=" w-16 h-16 flex justify-center items-center rounded-full bg-gray-200">
+                                    key={index}
+                                    className=" w-16 h-16 flex justify-center items-center rounded-full bg-gray-200">
                                     <Image src={icon} alt="icon" priority objectFit="cover" className=" w-16 h-16 rounded-full" />
                                 </div>
                             ))}
