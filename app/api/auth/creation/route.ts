@@ -53,8 +53,10 @@
 import prisma from "@/app/lib/db";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { NextResponse } from "next/server";
+import { unstable_noStore as nostore } from 'next/cache';
 
 const getUserFromSession = async () => {
+    nostore();
     const { getUser } = getKindeServerSession();
     const user = await getUser();
     if (!user || user === null || !user.id) {
@@ -91,7 +93,7 @@ export async function GET() {
     try {
         const user = await getUserFromSession();
         await createUserInDb(user);
-        return NextResponse.redirect("http://localhost:3000/guestbook", 302);
+        return NextResponse.redirect("https://my-portofolio-80c11b0dz-works-projects-efd052ef.vercel.app/guestbook", 302);
     } catch (error) {
         console.error(`Error in creation API: ${error} `);
         return new NextResponse(

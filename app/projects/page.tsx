@@ -19,7 +19,7 @@ interface Props {
 
 async function Getdata() {
     const query = `
-    *[_type == "projects"]{
+    *[_type == "projects"] | order(_createdAt desc) {
         "id":_id,
           title,
           tags,
@@ -33,7 +33,9 @@ async function Getdata() {
     
     `
 
-    const data = await client.fetch(query)
+    // adding the revaldidate is the same for adding  const cache =  revalidate as in my prev projects here 
+
+    const data = await client.fetch(query, {}, { next: { revalidate: 30 } })
 
     return data
 

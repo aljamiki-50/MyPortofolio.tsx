@@ -7,12 +7,15 @@ import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/components
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import React, { Suspense } from 'react'
 import prisma from '../lib/db';
+import { unstable_noStore as nostore } from 'next/cache';
 import LoadingMessagesSkeleteon, { LoadingFormSkeleteon } from '@/components/Skeleton/LoadingMessagesSkeleteon';
 
 
 
 // The query to fetch back the data from the database
 async function GuestBookEntry() {
+  // we telling next that dont  cache this page we neeed fresh data always by adding the nostore
+  nostore()
 
   const data = await prisma.guestbookEntry.findMany({
     select: {
