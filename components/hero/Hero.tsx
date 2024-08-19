@@ -10,8 +10,9 @@ const Hero = () => {
     return (
         <div className=' grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
             <div className=" col-span-1 lg:col-span-2 h-full bg-gray-100 min-h-[500px] lg:min-h-[300px] rounded-2xl p-8 ">
-                <h1 className='  text-4xl lg:text-6xl font-medium'>hey  i am Liam  👨🏽👨🏽‍💻  </h1>
-                <h1 className='  text-4xl lg:text-6xl font-normal mt-3'>i am a Web Developer livin in 🇬🇧  </h1>
+                <h1 className=' text-center  text-4xl lg:text-4xl font-medium'>  Welcome To My Personal Portoflio  </h1>
+                <h2 className='  text-4xl text-center lg:text-3xl font-normal mt-3'>🚀 Aspiring  Full-Stack Developer💻 Passionate about Building Innovative Solutions</h2>
+                <p className='  lg:text-center lg:py-4 lg:leading-9   lg:font-semibold'> Am someone who enjoys engaging in meaningful and insightful conversations with others. I thrive on exploring a wide range of topics, from technology and science to arts and personal development. With a curiosity-driven mindset, I appreciate the opportunity to learn and share knowledge if i could . A friendly and approachable individual, I find joy in connecting with others and discovering new perspectives. </p>
                 {/* imported by  devdojo.com  */}
                 <a href={`mailto:${Email}`} className="relative inline-block text-lg group">
 

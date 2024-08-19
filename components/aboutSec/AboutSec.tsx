@@ -8,13 +8,13 @@ const AboutSec = () => {
 
     return (
         <div className=' grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10'>
-            <Card className=' col-span-1 lg:col-span-2 border-none bg-gray-100 gap4 '>
-                <h1 className=' text-xl lg:text-6xl '>Passionate Ever Style WebDevloper who loves to create </h1>
-                <p className=" mt-4 text-muted-foreground lg:text-lg ">
-                    Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Nisi eaque ut obcaecati modi illo,
-                    sit rerum laboriosam magnam placeat harum! Quibusdam omnis voluptatem voluptatibus,
-                    assumenda aliquam velit debitis vitae labore.
+            <Card className=' lg:py-10 col-span-1 lg:col-span-2 border-none bg-gray-100 gap4 '>
+                <h1 className=' text-xl lg:text-6xl '>🔥 Passionate & Ever-Stylish Web Developer with a Love for Creating 🌟 </h1>
+                <p className=" lg:py-2 mt-4 text-muted-foreground lg:text-lg ">
+                    ✨ Fueled by creativity and innovation,
+                     I bring style and passion to every project.
+                      Whether crafting dynamic websites or building seamless 
+                      user experiences, I'm dedicated to delivering excellence and bringing ideas to life. 🚀💻
                 </p>
                 {/* The imported button if you remmmber : */}
                 <a href={`mailto:${Email}`} className="relative inline-block text-lg group">
